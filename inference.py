@@ -1,7 +1,10 @@
 import torch
 from transformers import AutoFeatureExtractor,AutoTokenizer
-from model import vit_model
 from PIL import Image
+from transformers import AutoFeatureExtractor,AutoTokenizer,VisionEncoderDecoderModel
+import torch
+
+vit_model = VisionEncoderDecoderModel.from_pretrained("kajol/xray_to_text")
 
 encoder_checkpoint = "google/vit-base-patch16-224-in21k"
 decoder_checkpoint = "gpt2"
